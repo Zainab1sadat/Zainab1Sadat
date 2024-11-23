@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Movie Website</title>
+    <title>Movies - Movie Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,7 +26,18 @@
         }
         .content {
             padding: 20px;
+        }
+        .movie-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .movie {
+            border: 2px solid #ff0000;
+            padding: 10px;
             text-align: center;
+            width: 200px;
         }
     </style>
 </head>
@@ -37,8 +48,13 @@
         <a href="about.html">About</a>
     </header>
     <div class="content">
-        <h1>Welcome to Movie Website</h1>
-        <p>Your one-stop destination for exploring movies, cast, and reviews!</p>
+        <h1>Movies</h1>
+        <div class="movie-list">
+            <div class="movie">Movie 1</div>
+            <div class="movie">Movie 2</div>
+            <div class="movie">Movie 3</div>
+            <div class="movie">Movie 4</div>
+        </div>
     </div>
     <footer>
         <p>&copy; 2024 Movie Website</p>
