@@ -4,27 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies - Movie Website</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us - MovieSite</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        header, footer {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        header a, footer a {
-            color: #ff0000;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-        .content {
+
+.content {
             padding: 20px;
         }
         .movie-list {
@@ -39,14 +23,161 @@
             text-align: center;
             width: 200px;
         }
+
+
+      body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2A2D34; 
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+}
+
+
+.nav-link {
+    text-decoration: none;
+    color: #b0b0b0; 
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 20px;
+    padding: 8px 15px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6f61; 
+    transform: scale(1.1); 
+}
+
+.nav-link:active {
+    color: #ff6f61; 
+    transform: scale(1.05);
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff6f61;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%; 
+    left: 0; 
+}
+
+.nav-link:active::before {
+    width: 100%;
+    left: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 8px rgba(255, 111, 97, 0.7); 
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    .nav-link {
+        margin: 10px 0;
+    }
+}
+        header {
+            background-color: #1E1E1E;
+            padding: 20px;
+            text-align: center;
+        }
+        .title {
+            text-align: center;
+            margin: 10px;
+        }
+        header h1 {
+            color: #FF6F61;
+            margin: 0;
+        }
+        section {
+            padding: 40px;
+        }
+        h2 {
+            color: #D4AF37;
+            font-size: 1.8em;
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .team-member {
+            text-align: center;
+            margin: 10px;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .team-member h3 {
+            margin-top: 10px;
+            color: #008080;
+        }
+        .team-member p {
+            color: #B0B0B0;
+        }
+        .about-site {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .about-site p {
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        header, footer {
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        header a, footer a {
+            color: #ff0000;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html">Home</a>
-        <a href="movies.html">Movies</a>
-        <a href="about.html">About</a>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="movies.html" class="nav-link">Movies</a>
+        <a href="about.html" class="nav-link">About</a>
     </header>
+
+
     <div class="content">
         <h1>Movies</h1>
         <div class="movie-list">
