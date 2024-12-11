@@ -1,167 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Us - MovieSite</title>
+    <title>Movies - MovieSite</title>
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2A2D34; 
+            color: #fff;
+        }
 
-.content {
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #b0b0b0; 
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 0 20px;
+            padding: 8px 15px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ff6f61; 
+            transform: scale(1.1); 
+        }
+
+        .nav-link:active {
+            color: #ff6f61; 
+            transform: scale(1.05);
+        }
+
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ff6f61;
+            bottom: 0;
+            left: 50%;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-link:hover::before {
+            width: 100%; 
+            left: 0; 
+        }
+
+        .nav-link:active::before {
+            width: 100%;
+            left: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a, #333);
+        }
+
+        .nav-link:hover {
+            text-shadow: 0 0 8px rgba(255, 111, 97, 0.7); 
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+            .nav-link {
+                margin: 10px 0;
+            }
+        }
+
+        .content {
             padding: 20px;
         }
-        .movie-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+
+        h1 {
+            text-align: center;
+            color: #D4AF37;
         }
+
+        .movie-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 columns */
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
         .movie {
             border: 2px solid #ff0000;
             padding: 10px;
             text-align: center;
             width: 200px;
-        }
-
-
-      body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2A2D34; 
-    color: #fff;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1a1a1a;
-    padding: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-}
-
-
-.nav-link {
-    text-decoration: none;
-    color: #b0b0b0; 
-    font-size: 1.2em;
-    font-weight: 600;
-    margin: 0 20px;
-    padding: 8px 15px;
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #ff6f61; 
-    transform: scale(1.1); 
-}
-
-.nav-link:active {
-    color: #ff6f61; 
-    transform: scale(1.05);
-}
-
-.nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #ff6f61;
-    bottom: 0;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-.nav-link:hover::before {
-    width: 100%; 
-    left: 0; 
-}
-
-.nav-link:active::before {
-    width: 100%;
-    left: 0;
-}
-
-header {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-}
-
-.nav-link:hover {
-    text-shadow: 0 0 8px rgba(255, 111, 97, 0.7); 
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-    .nav-link {
-        margin: 10px 0;
-    }
-}
-        header {
-            background-color: #1E1E1E;
-            padding: 20px;
-            text-align: center;
-        }
-        .title {
-            text-align: center;
-            margin: 10px;
-        }
-        header h1 {
-            color: #FF6F61;
-            margin: 0;
-        }
-        section {
-            padding: 40px;
-        }
-        h2 {
-            color: #D4AF37;
-            font-size: 1.8em;
-        }
-        .team {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-        }
-        .team-member {
-            text-align: center;
-            margin: 10px;
-        }
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .team-member h3 {
-            margin-top: 10px;
-            color: #008080;
-        }
-        .team-member p {
-            color: #B0B0B0;
-        }
-        .about-site {
             background-color: #333;
-            padding: 20px;
             border-radius: 8px;
-            margin-top: 50px;
-            text-align: center;
-        }
-        .about-site p {
-            font-size: 1.1em;
-            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        header, footer {
+        .movie img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .movie:hover img {
+            transform: scale(1.1);
+        }
+
+        .movie-title {
+            font-size: 1.3em;
+            color: #FF6F61;
+            margin: 10px 0;
+        }
+
+        .movie-description {
+            color: #b0b0b0;
+            font-size: 0.9em;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .movie:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .movie:hover .movie-description {
+            display: block;
+            opacity: 1;
+        }
+
+        footer {
+            background-color: #1a1a1a;
             color: #fff;
             text-align: center;
             padding: 10px;
         }
-        header a, footer a {
+
+        footer p {
+            margin: 0;
+        }
+        
+        footer a {
             color: #ff0000;
             text-decoration: none;
             margin: 0 10px;
@@ -177,16 +175,92 @@ header {
         <a href="about.html" class="nav-link">About</a>
     </header>
 
-
     <div class="content">
         <h1>Movies</h1>
         <div class="movie-list">
-            <div class="movie">Movie 1</div>
-            <div class="movie">Movie 2</div>
-            <div class="movie">Movie 3</div>
-            <div class="movie">Movie 4</div>
+            <!-- Column 1 -->
+            <div class="movie">
+                <img src="https://www.geekalerts.com/u/Joker-Poster.jpg" alt="Joker">
+                <div class="movie-title">Joker</div>
+                <div class="movie-description">A man with a dark past becomes the iconic villain in this psychological thriller.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.Dy4xpDTkQHtqaErhKAgtbgHaLH?rs=1&pid=ImgDetMain" alt="The Shining">
+                <div class="movie-title">The Shining</div>
+                <div class="movie-description">A writer's mental state deteriorates while staying in a haunted hotel.</div>
+            </div>
+            <div class="movie">
+                <img src="https://i.pinimg.com/736x/b1/eb/82/b1eb82fb338df4d675af2a42cfcc00ca.jpg" alt="Arcane">
+                <div class="movie-title">Arcane</div>
+                <div class="movie-description">A powerful animated series set in the world of League of Legends.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.ejnJD_O8ixddwvzbIDwbUQHaE5?rs=1&pid=ImgDetMain" alt="The Pianist">
+                <div class="movie-title">The Pianist</div>
+                <div class="movie-description">A Holocaust survivor struggles to survive in Nazi-occupied Warsaw.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.IhX8xhmH5uHj_AKYbtxHTgHaK-?rs=1&pid=ImgDetMain" alt="The Platform">
+                <div class="movie-title">The Platform</div>
+                <div class="movie-description">A dystopian film where prisoners on different levels must fight for survival.</div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="movie">
+                <img src="https://www.tvguide.com/a/img/catalog/provider/1/2/1-9050537522.jpg" alt="Titanic">
+                <div class="movie-title">Titanic</div>
+                <div class="movie-description">A love story set against the backdrop of the ill-fated voyage of the Titanic.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.h2bQpy1AmvhEwRLfFGGQ-QHaJ4?rs=1&pid=ImgDetMain" alt="Spider Man">
+                <div class="movie-title">Spider Man</div>
+                <div class="movie-description">A young man gains superpowers and battles villains to protect his city.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/R.6559ce34ad34d3aa48c53582329ed132?rik=NrA3JkJbC8%2fYhA&pid=ImgRaw&r=0" alt="Not Without My Daughter">
+                <div class="movie-title">Not Without My Daughter</div>
+                <div class="movie-description">A woman fights to escape Iran with her daughter after being trapped by her abusive husband.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/R.10ce5d95418adf065e8cdaba1743a7b3?rik=bHLEi8w1j5UiKA&pid=ImgRaw&r=0" alt="Before Sunrise">
+                <div class="movie-title">Before Sunrise</div>
+                <div class="movie-description">A couple shares a night of deep conversation and connection in Vienna.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.FNf4BQPsXQGw-3EVcxe9WwHaEK?rs=1&pid=ImgDetMain" alt="Alien Romulus">
+                <div class="movie-title">Alien Romulus</div>
+                <div class="movie-description">A group of people is stranded on a deserted planet and encounter an alien race.</div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.Dm21XNZFN6D9eLsT1NOX3QHaLH?rs=1&pid=ImgDetMain" alt="Loss">
+                <div class="movie-title">Loss</div>
+                <div class="movie-description">A personal tragedy leads to an intense journey of self-discovery and healing.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.6erJ3FK7pUcbUS31jXNXywHaHa?rs=1&pid=ImgDetMain" alt="Breaking Bad">
+                <div class="movie-title">Breaking Bad</div>
+                <div class="movie-description">A high school chemistry teacher turns to a life of crime after a cancer diagnosis.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.1yHIEengjVU0SdphrdFc6AHaJ4?rs=1&pid=ImgDetMain" alt="Peaky Blinders">
+                <div class="movie-title">Peaky Blinders</div>
+                <div class="movie-description">A gang of criminals in post-WWI Birmingham navigates power and betrayal.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.84T6GISDhdv3VPcyQo7uBwHaHa?rs=1&pid=ImgDetMain" alt="Mr Robot">
+                <div class="movie-title">Mr Robot</div>
+                <div class="movie-description">A young programmer is recruited by an anarchist known as Mr. Robot to take down corrupt corporations.</div>
+            </div>
+            <div class="movie">
+                <img src="https://th.bing.com/th/id/OIP.WhMzXo0p04lEEiGh3XP0mQHaK5?rs=1&pid=ImgDetMain" alt="Leon">
+                <div class="movie-title">Léon: The Professional</div>
+                <div class="movie-description">A hitman takes in a young girl seeking revenge for the murder of her family.</div>
+            </div>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2024 Movie Website</p>
     </footer>
