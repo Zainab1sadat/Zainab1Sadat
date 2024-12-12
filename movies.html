@@ -1,194 +1,388 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Us - MovieSite</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Movies - MovieSite</title>
     <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2a2d34;
+        color: #fff;
+      }
 
-.content {
-            padding: 20px;
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a1a1a;
+        padding: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: #b0b0b0;
+        font-size: 1.2em;
+        font-weight: 600;
+        margin: 0 20px;
+        padding: 8px 15px;
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #ff6f61;
+        transform: scale(1.1);
+      }
+
+      .nav-link:active {
+        color: #ff6f61;
+        transform: scale(1.05);
+      }
+
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #ff6f61;
+        bottom: 0;
+        left: 50%;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+
+      .nav-link:hover::before {
+        width: 100%;
+        left: 0;
+      }
+
+      .nav-link:active::before {
+        width: 100%;
+        left: 0;
+      }
+
+      header {
+        background: linear-gradient(135deg, #1a1a1a, #333);
+      }
+
+      .nav-link:hover {
+        text-shadow: 0 0 8px rgba(255, 111, 97, 0.7);
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
         }
+        .nav-link {
+          margin: 10px 0;
+        }
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #d4af37;
+      }
+
+      .movie-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 columns */
+        gap: 20px;
+        justify-items: center;
+        margin-top: 20px;
+      }
+
+      .movie {
+        border: 2px solid #ff0000;
+        padding: 10px;
+        text-align: center;
+        width: 200px;
+        background-color: #333;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .movie img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .movie:hover img {
+        transform: scale(1.1);
+      }
+
+      .movie-title {
+        font-size: 1.3em;
+        color: #ff6f61;
+        margin: 10px 0;
+      }
+
+      .movie-description {
+        color: #b0b0b0;
+        font-size: 0.9em;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .movie:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .movie:hover .movie-description {
+        display: block;
+        opacity: 1;
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      footer a {
+        color: #ff0000;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+      }
+
+      /* responsive */
+      @media (max-width: 1024px) {
         .movie-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+          justify-items: center;
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 952px) {
+        .movie-list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          justify-items: center;
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 858px) {
+        .movie-list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          justify-items: center;
+          margin-top: 20px;
+        }
+      }
+
+        @media (max-width: 650px) {
+        .movie-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          justify-items: center;
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .movie-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          justify-items: center;
+          margin-top: 20px;
         }
         .movie {
-            border: 2px solid #ff0000;
-            padding: 10px;
-            text-align: center;
-            width: 200px;
+          border: 2px solid #ff0000;
+          padding: 10px;
+          text-align: center;
+          width: 170px;
+          background-color: #333;
+          border-radius: 8px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          position: relative;
+          overflow: hidden;
         }
+      }
 
-
-      body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2A2D34; 
-    color: #fff;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1a1a1a;
-    padding: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-}
-
-
-.nav-link {
-    text-decoration: none;
-    color: #b0b0b0; 
-    font-size: 1.2em;
-    font-weight: 600;
-    margin: 0 20px;
-    padding: 8px 15px;
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #ff6f61; 
-    transform: scale(1.1); 
-}
-
-.nav-link:active {
-    color: #ff6f61; 
-    transform: scale(1.05);
-}
-
-.nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #ff6f61;
-    bottom: 0;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-.nav-link:hover::before {
-    width: 100%; 
-    left: 0; 
-}
-
-.nav-link:active::before {
-    width: 100%;
-    left: 0;
-}
-
-header {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-}
-
-.nav-link:hover {
-    text-shadow: 0 0 8px rgba(255, 111, 97, 0.7); 
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-    .nav-link {
-        margin: 10px 0;
-    }
-}
-        header {
-            background-color: #1E1E1E;
-            padding: 20px;
-            text-align: center;
+         @media (max-width: 375px) {
+        .movie-list {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 20px;
+          justify-items: center;
+          margin-top: 20px;
         }
-        .title {
-            text-align: center;
-            margin: 10px;
+                .movie {
+          border: 2px solid #ff0000;
+          padding: 10px;
+          text-align: center;
+          width: 250px;
+          background-color: #333;
+          border-radius: 8px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          position: relative;
+          overflow: hidden;
         }
-        header h1 {
-            color: #FF6F61;
-            margin: 0;
-        }
-        section {
-            padding: 40px;
-        }
-        h2 {
-            color: #D4AF37;
-            font-size: 1.8em;
-        }
-        .team {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-        }
-        .team-member {
-            text-align: center;
-            margin: 10px;
-        }
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .team-member h3 {
-            margin-top: 10px;
-            color: #008080;
-        }
-        .team-member p {
-            color: #B0B0B0;
-        }
-        .about-site {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 50px;
-            text-align: center;
-        }
-        .about-site p {
-            font-size: 1.1em;
-            text-align: center;
-        }
-
-        header, footer {
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        header a, footer a {
-            color: #ff0000;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="movies.html" class="nav-link">Movies</a>
-        <a href="about.html" class="nav-link">About</a>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="movies.html" class="nav-link">Movies</a>
+      <a href="about.html" class="nav-link">About</a>
     </header>
 
-
     <div class="content">
-        <h1>Movies</h1>
-        <div class="movie-list">
-            <div class="movie">Movie 1</div>
-            <div class="movie">Movie 2</div>
-            <div class="movie">Movie 3</div>
-            <div class="movie">Movie 4</div>
+      <h1>Movies 🎬</h1>
+      <div class="movie-list">
+        <!-- Column 1 -->
+        <div class="movie">
+          <img src="" alt="Joker" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
         </div>
+        <div class="movie">
+          <img src="" alt="The Shining" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="Arcane" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="The Pianist" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="The Platform" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="movie">
+          <img src="" alt="Titanic" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="Spider Man" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="Not Without My Daughter" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="Before Sunrise" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="movie">
+          <img src="" alt="Loss" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="Breaking Bad" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="Peaky Blinders" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="Mr Robot" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+        <div class="movie">
+          <img src="" alt="Leon" />
+          <div class="movie-title"></div>
+          <div class="movie-description"></div>
+        </div>
+      </div>
     </div>
+
     <footer>
-        <p>&copy; 2024 Movie Website</p>
+      <p>&copy; 2024 Movie Website</p>
     </footer>
-</body>
+
+    <script>
+      async function loadMovies() {
+        try {
+          const response = await fetch("data.json");
+          if (!response.ok) {
+            throw new Error("Failed to load movie data");
+          }
+
+          const movies = await response.json();
+
+          const existingCards = document.querySelectorAll(".movie");
+
+          movies.forEach((movie, index) => {
+            if (index < existingCards.length) {
+              const card = existingCards[index];
+
+              const imgElement = card.querySelector("img");
+              const titleElement = card.querySelector(".movie-title");
+              const descriptionElement =
+                card.querySelector(".movie-description");
+
+              imgElement.src = movie.img;
+              titleElement.textContent = movie.name;
+              descriptionElement.textContent = movie.description;
+
+              card.addEventListener("click", () => {
+                window.open(movie.link, "_blank");
+              });
+            }
+          });
+        } catch (error) {
+          console.error("Error loading movies:", error);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", loadMovies);
+    </script>
+  </body>
 </html>

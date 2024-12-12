@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "name": "Joker",
+    "img": "https://www.geekalerts.com/u/Joker-Poster.jpg",
+    "description": "A man with a dark past becomes the iconic villain in this psychological thriller.",
+    "link": "https://youtu.be/HHBz58Du9lM?si=Wiynaum05WSi7rJ9"
+  },
+  {
+    "id": 2,
+    "img": "https://th.bing.com/th/id/OIP.Dy4xpDTkQHtqaErhKAgtbgHaLH?rs=1&pid=ImgDetMain",
+    "name": "The Shining",
+    "description": "A writer's mental state deteriorates while staying in a haunted hotel.",
+    "link": "https://youtu.be/kBVXROnbIwM?si=EiF9e5eJLOvJpMlm"
+  },
+  {
+    "id": 3,
+    "name": "Arcane",
+    "img": "https://i.pinimg.com/736x/b1/eb/82/b1eb82fb338df4d675af2a42cfcc00ca.jpg",
+    "description": "A powerful animated series set in the world of League of Legends.",
+    "link": "https://youtu.be/k_ZsDGM7KPo?si=EKtQm6IvdbVWzOik"
+  },
+  {
+    "id": 4,
+    "name": "The Pianist",
+    "img": "https://th.bing.com/th/id/OIP.ejnJD_O8ixddwvzbIDwbUQHaE5?rs=1&pid=ImgDetMain",
+    "description": "A Holocaust survivor struggles to survive in Nazi-occupied Warsaw.",
+    "link": "https://www.aparat.com/v/y162162"
+  },
+  {
+    "id": 5,
+    "name": "The Platform",
+    "img": "https://th.bing.com/th/id/OIP.IhX8xhmH5uHj_AKYbtxHTgHaK-?rs=1&pid=ImgDetMain",
+    "description": "A dystopian film where prisoners on different levels must fight for survival.",
+    "link": "https://youtu.be/U6zPkPtPvW0?si=aPkUX18-96PjY7hr"
+  },
+  {
+    "id": 6,
+    "name": "Titanic",
+    "img": "https://www.tvguide.com/a/img/catalog/provider/1/2/1-9050537522.jpg",
+    "description": "A love story set against the backdrop of the ill-fated voyage of the Titanic.",
+    "link": "https://youtu.be/51EN2VrdpAo?si=q-gRKRuMH8hxsnAg"
+  },
+  {
+    "id": 7,
+    "name": "Spider Man",
+    "img": "https://th.bing.com/th/id/OIP.h2bQpy1AmvhEwRLfFGGQ-QHaJ4?rs=1&pid=ImgDetMain",
+    "description": "A young man gains superpowers and battles villains to protect his city.",
+    "link": "https://youtu.be/mBrUx6M6R7U?si=KoSWiP227WfZvQQf"
+  },
+  {
+    "id": 8,
+    "name": "Not Without My Daughter",
+    "img": "https://th.bing.com/th/id/R.6559ce34ad34d3aa48c53582329ed132?rik=NrA3JkJbC8%2fYhA&pid=ImgRaw&r=0",
+    "description": "A woman fights to escape Iran with her daughter after being trapped by her abusive husband.",
+    "link": "https://youtu.be/3kKQ7fm4QaA?si=BpEqMHghAwuLomW-"
+  },
+  {
+    "id": 9,
+    "name": "Before Sunrise",
+    "img": "https://th.bing.com/th/id/R.10ce5d95418adf065e8cdaba1743a7b3?rik=bHLEi8w1j5UiKA&pid=ImgRaw&r=0",
+    "description": "A couple shares a night of deep conversation and connection in Vienna.",
+    "link": "https://dai.ly/x94jvyy"
+  },
+  {
+    "id": 10,
+    "name": "Alien Romulus",
+    "img": "https://th.bing.com/th/id/OIP.FNf4BQPsXQGw-3EVcxe9WwHaEK?rs=1&pid=ImgDetMain",
+    "description": "A group of people is stranded on a deserted planet and encounter an alien race.",
+    "link": "https://youtu.be/MFmTPUybeJg?si=_yQwz1LtseM4TvGc"
+  },
+  {
+    "id": 11,
+    "name": "Loss",
+    "img": "https://th.bing.com/th/id/OIP.Dm21XNZFN6D9eLsT1NOX3QHaLH?rs=1&pid=ImgDetMain",
+    "description": "A personal tragedy leads to an intense journey of self-discovery and healing.",
+    "link": "https://youtu.be/kZqKGpTTV6I?si=4ohTT0jnQsN6FBc4"
+  },
+  {
+    "id": 12,
+    "name": "Breaking Bad",
+    "img": "https://th.bing.com/th/id/OIP.6erJ3FK7pUcbUS31jXNXywHaHa?rs=1&pid=ImgDetMain",
+    "description": "A high school chemistry teacher turns to a life of crime after a cancer diagnosis.",
+    "link": "https://youtu.be/8XVnRzr7Bd4?si=v3_d9kftjzXMtB3v"
+  },
+  {
+    "id": 13,
+    "img": "https://th.bing.com/th/id/OIP.1yHIEengjVU0SdphrdFc6AHaJ4?rs=1&pid=ImgDetMain",
+    "name": "Peaky Blinders",
+    "description": "A gang of criminals in post-WWI Birmingham navigates power and betrayal.",
+    "link": "https://youtu.be/nyTjmaa6Cyw?si=U9AKFb_NgY1RsyhZ"
+  },
+  {
+    "id": 14,
+    "name": "Mr Robot",
+    "img": "https://th.bing.com/th/id/OIP.84T6GISDhdv3VPcyQo7uBwHaHa?rs=1&pid=ImgDetMain",
+    "description": "A young programmer is recruited by an anarchist known as Mr. Robot to take down corrupt corporations.",
+    "link": "https://youtu.be/Zc0kgPKYbaQ?si=XdT6Ee5dBQ1LjVNk"
+  },
+  {
+    "id": 15,
+    "img": "https://th.bing.com/th/id/OIP.WhMzXo0p04lEEiGh3XP0mQHaK5?rs=1&pid=ImgDetMain",
+    "name": "Léon: The Professional",
+    "description": "A hitman takes in a young girl seeking revenge for the murder of her family.",
+    "link": "https://youtu.be/d60Zj-7JJDY?si=JiADTkfmNowMVSyR"
+  }
+]
+
