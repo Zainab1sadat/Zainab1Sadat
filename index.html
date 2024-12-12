@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,7 +134,8 @@
                 flex-direction: column;
             }
 
-            .left-section, .right-section {
+            .left-section,
+            .right-section {
                 flex: 0 0 100%;
             }
 
@@ -141,117 +143,130 @@
                 grid-template-columns: 1fr;
             }
         }
+
         header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1a1a1a;
-    padding: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
 
 
-.nav-link {
-    text-decoration: none;
-    color: #b0b0b0; 
-    font-size: 1.2em;
-    font-weight: 600;
-    margin: 0 20px;
-    padding: 8px 15px;
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
+        .nav-link {
+            text-decoration: none;
+            color: #b0b0b0;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 0 20px;
+            padding: 8px 15px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
 
-.nav-link:hover {
-    color: #ff6f61; 
-    transform: scale(1.1); 
-}
+        .nav-link:hover {
+            color: #ff6f61;
+            transform: scale(1.1);
+        }
 
-.nav-link:active {
-    color: #ff6f61; 
-    transform: scale(1.05);
-}
+        .nav-link:active {
+            color: #ff6f61;
+            transform: scale(1.05);
+        }
 
-.nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #ff6f61;
-    bottom: 0;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
-}
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ff6f61;
+            bottom: 0;
+            left: 50%;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
 
-.nav-link:hover::before {
-    width: 100%; 
-    left: 0; 
-}
+        .nav-link:hover::before {
+            width: 100%;
+            left: 0;
+        }
 
-.nav-link:active::before {
-    width: 100%;
-    left: 0;
-}
+        .nav-link:active::before {
+            width: 100%;
+            left: 0;
+        }
 
-header {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-}
+        header {
+            background: linear-gradient(135deg, #1a1a1a, #333);
+        }
 
-.nav-link:hover {
-    text-shadow: 0 0 8px rgba(255, 111, 97, 0.7); 
-}
+        .nav-link:hover {
+            text-shadow: 0 0 8px rgba(255, 111, 97, 0.7);
+        }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-    .nav-link {
-        margin: 10px 0;
-    }
-}
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            .nav-link {
+                margin: 10px 0;
+            }
+        }
+
         header {
             background-color: #1E1E1E;
             padding: 20px;
             text-align: center;
         }
+
         .title {
             text-align: center;
             margin: 10px;
         }
+
         header h1 {
             color: #FF6F61;
             margin: 0;
         }
+
         section {
             padding: 40px;
         }
+
         h2 {
             color: #D4AF37;
             font-size: 1.8em;
         }
+
         .team {
             display: flex;
             justify-content: space-around;
             margin-top: 30px;
         }
+
         .team-member {
             text-align: center;
             margin: 10px;
         }
+
         .team-member img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
         }
+
         .team-member h3 {
             margin-top: 10px;
             color: #008080;
         }
+
         .team-member p {
             color: #B0B0B0;
         }
+
         .about-site {
             background-color: #333;
             padding: 20px;
@@ -259,17 +274,89 @@ header {
             margin-top: 50px;
             text-align: center;
         }
+
         .about-site p {
             font-size: 1.1em;
             text-align: center;
         }
+        .rating-section select,
+        .rating-section textarea {
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
 
-        header, footer {
+        .rating-section button {
+            background-color: #FF6F61;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .rating-section button:hover {
+            background-color: #e55d4d;
+        }
+
+        .comments-section {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        .comments-section h4 {
+            margin-bottom: 10px;
+            color: #FF6F61;
+        }
+
+        .comments-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comments-section li {
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            background-color: #333;
+            border-radius: 5px;
+            color: #fff;
+        }
+        .star-rating {
+            display: flex;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .star-rating span {
+            font-size: 1.5em;
+            color: #bbb;
+            /* Default star color */
+            transition: color 0.3s;
+        }
+
+        .star-rating span:hover,
+        .star-rating span.selected {
+            color: #FFD700;
+            /* Gold for selected stars */
+        }
+
+        header,
+        footer {
             color: #fff;
             text-align: center;
             padding: 10px;
         }
-        header a, footer a {
+
+        header a,
+        footer a {
             color: #ff0000;
             text-decoration: none;
             margin: 0 10px;
@@ -277,6 +364,7 @@ header {
         }
     </style>
 </head>
+
 <body>
     <header>
         <a href="index.html" class="nav-link">Home</a>
@@ -284,45 +372,63 @@ header {
         <a href="about.html" class="nav-link">About</a>
     </header>
 
-</head>
-<body>
+    </head>
 
-    <header>
-        <h1>MovieSite</h1>
-    </header>
+    <body>
 
-    <div class="container">
-        <div class="left-section">
-            <h2>Best Movies</h2>
+        <header>
+            <h1>MovieSite</h1>
+        </header>
 
-            <div class="movie-card">
-                <img src="https://via.placeholder.com/300x150" alt="Movie 1">
-                <div class="movie-title">Movie Title 1</div>
+        <div class="container">
+            <div class="left-section">
+                <h2>Best Movies</h2>
+
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/300x150" alt="Movie 1">
+                    <div class="movie-title">Movie Title 1</div>
+                    <div class="rating-section">
+                        <label for="rating">Rate:</label>
+                        <div class="star-rating" data-movie-id="MOVIE_ID">
+                            <span data-value="1">&#9733;</span>
+                            <span data-value="2">&#9733;</span>
+                            <span data-value="3">&#9733;</span>
+                            <span data-value="4">&#9733;</span>
+                            <span data-value="5">&#9733;</span>
+                        </div>
+                        <textarea class="comment" placeholder="Add your comment..."></textarea>
+                        <button class="submit-comment">Submit</button>
+                    </div>
+                    <div class="comments-section">
+                        <h4>Comments:</h4>
+                        <ul class="comments-list"></ul>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/300x150" alt="Movie 2">
+                    <div class="movie-title">Movie Title 2</div>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/300x150" alt="Movie 3">
+                    <div class="movie-title">Movie Title 3</div>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="right-section">
+                    <h2>See More Movies</h2>
+
+                    <div class="more-movie-list">
+
+                    </div>
+                </div>
+
             </div>
 
-            <div class="movie-card">
-                <img src="https://via.placeholder.com/300x150" alt="Movie 2">
-                <div class="movie-title">Movie Title 2</div>
-            </div>
-
-            <div class="movie-card">
-                <img src="https://via.placeholder.com/300x150" alt="Movie 3">
-                <div class="movie-title">Movie Title 3</div>
-            </div>
         </div>
-<div class="right-section">
-    <div class="right-section">
-        <h2>See More Movies</h2>
-    
-        <div class="more-movie-list">
-          
-            </div>
-        </div>
-    
-    </div>
-    
-</div>
 
 
-</body>
+    </body>
+
 </html>
