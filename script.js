@@ -111,10 +111,19 @@ function addCommentListeners() {
             const movieId = button.getAttribute('data-movie-id');
             const starRatingElement = document.querySelector(`.star-rating[data-movie-id="${movieId}"]`);
             const rating = starRatingElement.dataset.selectedValue || 0;
-            const comment = document.querySelector(`.comment[data-movie-id="${movieId}"]`).value;
+            const commentInput = document.querySelector(`.comment[data-movie-id="${movieId}"]`);
+            const comment = commentInput.value;
+
+            if (comment.trim() === "") {
+                alert("Comment cannot be empty!");
+                return;
+            }
 
             saveComment(movieId, rating, comment);
             displayComments(movieId);
+
+            // Clear the input field after submission
+            commentInput.value = '';
         });
     });
 }
@@ -136,7 +145,7 @@ function displayComments(movieId) {
     const commentsList = document.querySelector(`.comments-list[data-movie-id="${movieId}"]`);
     const comments = JSON.parse(localStorage.getItem('comments')) || {};
 
-    commentsList.innerHTML = '';
+    commentsList.innerHTML = ''; // Clear existing comments to avoid duplicates
 
     if (comments[movieId]) {
         comments[movieId].forEach(entry => {
