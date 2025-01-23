@@ -1,5 +1,4 @@
 ## Hi there 👋
- https://zainab1sadat.github.io/Zainab1Sadat/
 <!--
 **Zainab1sadat/Zainab1Sadat** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 1_Hi I am Zainab Sadat.
